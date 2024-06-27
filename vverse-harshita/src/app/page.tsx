@@ -10,19 +10,26 @@ import recordIcon from '../../public/Start-Stop Recording.png'
 import maxIcon from '../../public/Maximize-Minimize.png'
 import flyIcon from '../../public/Fly-Expand.png'
 import endIcon from '../../public/end-call.png'
+import profileIcon from '../../public/Profiles Images (1).png'
+import profileIcon2 from '../../public/Profiles Images-2 (1).png'
+import userImage1 from '../../public/image-1 (1).png'
+import userImage2 from '../../public/image-2.png'
 export default function Home() {
   const data = [
     {
       "text": "Personal Profile Builder",
-      "name": "DR. Ahmed Hasan"
+      "name": "DR. Ahmed Hasan",
+      "img":"/Profiles Images (1).png"
     },
     {
       "text": "Entity Profile Builder",
-      "name": "Animalz story zoo"
+      "name": "Animalz story zoo",
+      "img":"Profiles Images-1 (2).png"
     },
     {
       "text": "New Entity Builder",
-      "name": ""
+      "name": "",
+      "img":"/building.png"
     },
 
   ]
@@ -51,7 +58,9 @@ export default function Home() {
               <div className="w-[460px] h-[240px] rounded-md border border-gray-200  shadow-md flex items-center justify-center" key={index}>
                 <div className="text-center">
                   <h3 className="text-[20px] font-bold">{item.text}</h3>
-                  <div className="h-[125px] w-[125px] rounded-full bg-[linear-gradient(90deg,#FA0101_0%,#016DEA_100%)] mx-auto my-4"></div>
+                  <div className="h-[125px] w-[125px] rounded-full bg-[linear-gradient(90deg,#FA0101_0%,#016DEA_100%)] mx-auto my-4 bg-cover bg-center" style={{
+            backgroundImage: `linear-gradient(90deg, #FA0101 0%, #016DEA 100%), url(${item.img})`
+          }}></div>
                   <p className="text-[14px] font-bold">{item.name}</p>
                 </div>
               </div>
@@ -62,7 +71,7 @@ export default function Home() {
       </section>
 
 
-      <section className="p-3  border-gray-200">
+      <section className="p-3  border-gray-200 ">
         <div className="py-7 flex items-center justify-between space-x-2">
           {/* <div className="text-5xl bg-clip-text font-extrabold ...">
   <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
@@ -74,7 +83,7 @@ export default function Home() {
         </div>
         <div className="bg-white border p-4 rounded-lg border-gray-200">
           <div className="flex items-center space-x-3 py-8">
-            <img src={userIcon.src} />
+            <img src={profileIcon2.src} className="h-12"/>
             <div className="">
               <h1 className="text-[14px] font-bold text-black">Dr. Sofia Ibrahim</h1>
               <p className="text-[12px] text-gray-500">Business Development Director</p>
@@ -86,40 +95,50 @@ export default function Home() {
           <div className="shadow-lg  ">
             <div className="flex space-x-3 mb-24 ">
 
-              <div className="w-[677px] rounded-lg h-[475px] bg-gray-300 p-8">
+              <div className="w-[677px]  rounded-lg bg-gray-300 h-[475px] bg-cover bg-center relative"  style={{ backgroundImage: `url('/image.png')` }}>
+     <div className="absolute inset-0 backdrop-blur-md backdrop-brightness-15 w-full h-full flex flex-col p-8">
                 <div className="flex justify-end space-x-3">
                   <img src={audioIcon.src} />
                   <img src={videoIcon.src} />
                 </div>
 
-                <div className="relative mx-auto my-24 flex items-center justify-center">
-                  <div className=" h-[125px] w-[125px]  bg-[linear-gradient(90deg,#FA0101_0%,#016DEA_100%)] rounded-full flex items-center justify-end">
-                    <div className="absolute border border-white  w-[20px] h-[20px] bg-green-400 rounded-full mt-[4rem] ml-[4rem]"></div>
+                <div className=" mx-auto my-24 flex items-center justify-center">
+                  <div className=" h-[125px] w-[125px]  bg-[linear-gradient(90deg,#FA0101_0%,#016DEA_100%)] rounded-full flex items-center justify-end bg-cover bg-center" style={{ backgroundImage: `url('/Profiles Images (1).png')` }}>
+                    {/* <div className="absolute border border-white  w-[20px] h-[20px] bg-green-400 rounded-full mt-[4rem] ml-[4rem]"></div> */}
                   </div>
                 </div>
                 <div className="flex flex-col h-full">
-                  <button className="w-[133px]  h-[28px] rounded-2xl bg-gray-400 text-white font-bold text-[12px]">Dr. Ahmed Hassan</button>
+                  <button className="w-[133px]  h-[28px] rounded-2xl bg-[rgba(0,0,0,0.3)]  text-white font-bold text-[12px]">Dr. Ahmed Hassan</button>
                 </div>
               </div>
-              <div className="w-[677px] p-8 rounded-lg bg-gray-300 h-[475px]">
-                <div className="flex justify-end space-x-3">
+</div>
+
+
+
+<div className="w-[677px]  rounded-lg bg-gray-300 h-[475px] bg-cover bg-center relative"  style={{ backgroundImage: `url('/image-2.png')` }}>
+     <div className="absolute inset-0 backdrop-blur-md backdrop-brightness-15 w-full h-full flex flex-col p-8">
+             
+              <div className="flex justify-end space-x-3">
                   <img src={audioIcon.src} />
                   <img src={videoIcon.src} />
                 </div>
-                <div className="relative mx-auto my-24 flex items-center justify-center">
-                  <div className=" h-[125px] w-[125px] border border-gray-400 rounded-full flex items-center justify-end">
-                    <div className="absolute border border-white  w-[20px] h-[20px] bg-green-400 rounded-full mt-[4rem] ml-[4rem]"></div>
+                <div className=" mx-auto my-24 flex items-center justify-center">
+                  <div className=" h-[125px] w-[125px] border border-gray-400 rounded-full flex items-center justify-end bg-cover bg-center"style={{ backgroundImage: `url('/Profiles Images-2 (1).png')` }}>
+                    {/* <div className="absolute border border-white  w-[20px] h-[20px] bg-green-400 rounded-full mt-[4rem] ml-[4rem]"></div> */}
                   </div>
                 </div>
-                <div className="flex flex-col h-full">
-                  <button className="w-[133px]   h-[28px] rounded-2xl bg-gray-400 text-white font-bold text-[12px]">Dr. Sofia Ibrahim</button>
+                <div className="flex flex-col h-full ">
+                  <button className="w-[133px] bg-[rgba(0,0,0,0.3)]   h-[28px] rounded-2xl back text-white font-bold text-[12px]">Dr. Sofia Ibrahim</button>
                 </div>
+
+              </div>
+              
               </div>
             </div>
 
 
             <div className="flex justify-center ">
-              <div className="w-[660px] h-[60px] mb-6 border border-gray-200 shadow-lg rounded-3xl p-4 justify-center flex items-center ">
+              <div className="w-[660px] h-[60px] mb-6 border border-gray-200 shadow-lg rounded-3xl p-4 justify-center flex items-center " >
                 <div className="icons flex space-x-16 ">
 
 
@@ -154,19 +173,20 @@ export default function Home() {
       </section>
 
 
+
+
+
+
+
       <section className="p-3  border-gray-200">
         <div className="py-7 flex items-center justify-between space-x-2">
-          {/* <div className="text-5xl bg-clip-text font-extrabold ...">
-  <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-    Hello world
-  </span>
-</div> */}
+         
           <h1 className="whitespace-nowrap">Chat</h1>
           <div className="w-[1323px] h-[1px] bg-gradient-to-r from-blue-500 to-violet-600"></div>
         </div>
         <div className="bg-white border p-8 rounded-lg border-gray-200">
           <div className="flex items-center space-x-3 py-8">
-            <img src={userIcon.src} />
+          <img src={profileIcon2.src} className="h-12"/>
             <div className="">
               <h1 className="text-[14px] font-bold text-black">Dr. Sofia Ibrahim</h1>
               <p className="text-[12px] text-gray-500">Business Development Director</p>
@@ -175,59 +195,60 @@ export default function Home() {
 
 
           </div>
-          <div className="shadow-lg ">
-            <div className="mb-3 relative mx-auto my-12 items-center justify-center flex">
-
           
-              <div className="w-[1200px] rounded-lg h-[675px] bg-gray-300 p-8 flex items-center justify-end">
+            <div className="mb-3 relative mx-auto  items-center justify-center flex">
+
+            <div className="w-[1200px] rounded-lg h-[675px] bg-gray-300  flex bg-center bg-cover items-center justify-end relative"  style={{ backgroundImage: `url('/image.png')` }}>
+            <div className="backdrop-blur-md backdrop-brightness-15 w-full h-full absolute p-16 inset-0">
                 {/* <div className="flex justify-end space-x-3">
                   <img src={audioIcon.src} />
-                  <img src={videoIcon.src} />
+                  <img src={videoIcon.src} 
                 </div> */}
 
                 <div className="relative mx-auto my-24 flex items-center justify-center">
-                  <div className=" h-[275px] w-[275px]  bg-[linear-gradient(90deg,#FA0101_0%,#016DEA_100%)] rounded-full flex items-center justify-end">
-                    <div className="absolute border border-white  w-[40px] h-[40px] bg-green-400 rounded-full mt-[8rem] ml-[4rem]"></div>
+                  <div className=" h-[275px] w-[275px]  bg-[linear-gradient(90deg,#FA0101_0%,#016DEA_100%)] rounded-full flex items-center justify-end bg-cover bg-center" style={{ backgroundImage: `url('/Profiles Images (1).png')` }}>
+                    {/* <div className="absolute border border-white  w-[40px] h-[40px] bg-green-400 rounded-full mt-[8rem] ml-[4rem]" ></div> */}
                   </div>
                 </div>
                 <div className="flex flex-col h-full">
-                  <button className="w-[133px]  h-[28px] rounded-2xl bg-gray-400 text-white font-bold text-[12px]">Dr. Ahmed Hassan</button>
+                  <button className="w-[133px]  h-[28px] rounded-2xl bg-[rgba(0,0,0,0.3)]  text-white font-bold text-[12px]">Dr. Ahmed Hassan</button>
                 </div>
+              </div>
               </div>
 
 
               
 
 
-              <div className="w-[331px] border bottom-0 right-0 border-gray-500 p-5 rounded-lg bg-gray-300 h-[208px] absolute justify-end">
+              <div className="w-[331px] border bottom-0 right-0 border-gray-500  rounded-lg bg-gray-300 h-[208px] bg-cover bg-center absolute justify-end" style={{ backgroundImage: `url('/image-2.png')` }} >
+
+              <div className="backdrop-blur-md backdrop-brightness-15 w-full h-full p-5 inset-0 absolute">
                 <div className="flex h-[2rem] justify-end space-x-2">
+
                   <img src={audioIcon.src} />
                   <img src={videoIcon.src} />
                 </div>
                 <div className="relative mx-auto  flex items-center justify-center">
-                  <div className=" h-[75px] w-[75px] bg-white border border-gray-400 rounded-full flex items-center justify-end">
+                  <div className=" h-[75px] w-[75px] bg-white border border-gray-400 rounded-full flex items-center justify-end bg-cover bg-center" style={{ backgroundImage: `url('/Profiles Images-2 (1).png')` }}>
                     <div className="absolute border border-white  w-[20px] h-[20px] bg-green-400 rounded-full mt-[3rem] ml-[5rem]"></div>
                   </div>
                 </div>
                 <div className="flex flex-col h-full">
-                  <button className="w-[122px]  mt-8 h-[28px] rounded-2xl bg-gray-400 text-white font-bold text-[12px]">Dr. Sofia Ibrahim</button>
+                  <button className="w-[122px]  mt-8 h-[28px] rounded-2xl bg-[rgba(0,0,0,0.3)]  text-white font-bold text-[12px]">Dr. Sofia Ibrahim</button>
                 </div>
               </div>
+              </div>
+             
 
 
               
             </div>
-
-
-            
-
+         
 
 
 
 
 
-
-          </div>
 
           <div className="flex justify-center ">
               <div className="w-[660px] h-[60px] mb-6 border border-gray-200 shadow-lg rounded-3xl p-4 justify-center flex items-center ">
